@@ -7,10 +7,15 @@ def index():
     if request.method == 'POST':
         # Pega os dados do formulário
         nome = request.form['nome']
-        email = request.form['email']
+        idade = request.form['idade']
+        peso = request.form['peso']
+        altura = request.form['altura']
+        genero = request.form['genero']
+        objetivo = request.form['objetivo']
+        musculoAlvo = request.form['musculoAlvo']
         
         # Aqui você pode processar os dados, salvar no banco de dados, etc.
-        print(f'Nome: {nome}, Email: {email}')
+        print(f'Nome: {nome}, Idade: {idade}, Peso: {peso}, Altura: {altura}, Genero: {genero}, Objetivo: {objetivo}, Musculo Alvo: {musculoAlvo}')
         
         # Redireciona para uma página de sucesso ou exibe uma mensagem
         return redirect(url_for('sucesso'))

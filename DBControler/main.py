@@ -20,10 +20,10 @@ for tabela in tabelas:
     colunas = cursor.fetchall()
 
     # Exibe as colunas
-    for coluna in colunas:
-        nome_coluna = coluna[1]  # Nome da coluna
-        tipo_coluna = coluna[2]  # Tipo de dados
-        print(f"Coluna: {nome_coluna}, Tipo: {tipo_coluna}")
+    # for coluna in colunas:
+    #     nome_coluna = coluna[1]  # Nome da coluna
+    #     tipo_coluna = coluna[2]  # Tipo de dados
+    #     print(f"Coluna: {nome_coluna}, Tipo: {tipo_coluna}")
         
 cursor.execute('SELECT * FROM TBObjetivo')
 tabela = cursor.fetchall()
