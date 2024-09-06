@@ -13,16 +13,11 @@ querysCriacaoBD = [
         NomeCas TEXT,
         PesoCas INTEGER NOT NULL,
         AlturaCas INTEGER NOT NULL,
-        HorasDiaCas INTEGER,
-        DiasSemanaCas INTEGER,
-        FlgExperienciaCas BOOLEAN,
         FkIdMA INTEGER NOT NULL,
         FkIdPro INTEGER NOT NULL,
-        FkIdRes INTEGER NOT NULL,
         FOREIGN KEY (FkIdObj) REFERENCES TBObjetivo (PkIdObj),
         FOREIGN KEY (FkIdMA) REFERENCES TBMusculosAlvo (PkIdMA),
-        FOREIGN KEY (FkIdPro) REFERENCES TBProtocolo (PkIdPro),
-        FOREIGN KEY (FkIdRes) REFERENCES TBTelTP (PkIdTP)
+        FOREIGN KEY (FkIdPro) REFERENCES TBProtocolo (PkIdPro)
     )''',
     '''
     CREATE TABLE IF NOT EXISTS TBProtocolo (
@@ -61,6 +56,11 @@ querysCriacaoBD = [
         PkIdObj INTEGER PRIMARY KEY AUTOINCREMENT,
         NomeObj TEXT NOT NULL,
         RecomendacaoObj TEXT NOT NULL
+    )''',
+    '''CREATE TABLE IF NOT EXISTS TBPesos (
+        PkIdPes INTEGER PRIMARY KEY AUTOINCREMENT,
+        ValorPes TEXT NOT NULL,
+        NomeIndexPes TEXT NOT NULL
     )''',
 ]
 

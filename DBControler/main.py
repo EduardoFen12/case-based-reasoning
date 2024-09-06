@@ -33,6 +33,10 @@ cursor.execute('SELECT * FROM TBMusculosAlvo')
 tabela = cursor.fetchall()
 for linha in tabela:
     print(linha)
+cursor.execute('SELECT * FROM TBPesos')
+tabela = cursor.fetchall()
+for linha in tabela:
+    print(linha)
 
 # Fecha a conexão
 conn.close()

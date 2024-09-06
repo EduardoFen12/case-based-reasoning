@@ -5,13 +5,22 @@ conn = sqlite3.connect('BDprotocolos.db')
 cursor = conn.cursor()
 
 querysBD = [
+    '''INSERT INTO TBPesos (ValorPes, NomeIndexPes) VALUES (4, 'Objetivo');''',
+    '''INSERT INTO TBPesos (ValorPes, NomeIndexPes) VALUES (5, 'MusculoAlvo');''',
+    '''INSERT INTO TBPesos (ValorPes, NomeIndexPes) VALUES (3, 'Genero');''',
+    '''INSERT INTO TBPesos (ValorPes, NomeIndexPes) VALUES (1, 'Peso');''',
+    '''INSERT INTO TBPesos (ValorPes, NomeIndexPes) VALUES (1, 'Altura');''',
+    '''INSERT INTO TBPesos (ValorPes, NomeIndexPes) VALUES (2, 'idade');''',
+    
     '''INSERT INTO TBMusculosAlvo (DescricaoMA) VALUES ('Superiores');''',
     '''INSERT INTO TBMusculosAlvo (DescricaoMA) VALUES ('Inferiores');''',
     '''INSERT INTO TBMusculosAlvo (DescricaoMA) VALUES ('Ambos');''',
     '''INSERT INTO TBMusculosAlvo (DescricaoMA) VALUES ('Ambos com foco em superiores');''',
     '''INSERT INTO TBMusculosAlvo (DescricaoMA) VALUES ('Ambos com foco em inferiores');''',
+    
     '''INSERT INTO TBObjetivo (NomeObj, RecomendacaoObj) VALUES ('Perder Gordura', 'Você PRECISA estar em deficit calórico (consumir menos calorias do que você gasta) e manter uma dieta rica em proteinas, frutas, verduras e legumes');''',
     '''INSERT INTO TBObjetivo (NomeObj, RecomendacaoObj) VALUES ('Ganhar Musculo', 'Você PRECISA estar em superávit calórico (consumir mais calorias do que você gasta) e manter uma dieta rica em proteinas, carboidratos, frutas, verduras e legumes');''',
+   
     '''INSERT INTO TBExercicios (DescricaoExe, AparelhoExe, FkIdMA) VALUES ('Supino reto', 'Halteres', 1)''',
     '''INSERT INTO TBExercicios (DescricaoExe, AparelhoExe, FkIdMA) VALUES ('Supino inclinado', 'Halteres', 1)''',
     '''INSERT INTO TBExercicios (DescricaoExe, AparelhoExe, FkIdMA) VALUES ('Voador', 'Peck deck', 1)''',
