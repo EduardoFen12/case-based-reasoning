@@ -29,14 +29,23 @@ cursor.execute('SELECT * FROM TBObjetivo')
 tabela = cursor.fetchall()
 for linha in tabela:
     print(linha)
+
 cursor.execute('SELECT * FROM TBMusculosAlvo')
 tabela = cursor.fetchall()
 for linha in tabela:
     print(linha)
+    
 cursor.execute('SELECT * FROM TBPesos')
 tabela = cursor.fetchall()
 for linha in tabela:
     print(linha)
+    
+cursor.execute('SELECT * FROM TBCasos')
+tabela = cursor.fetchall()
+for linha in tabela:
+    print(linha)
+    print(linha[7])
+    print(linha[8])
 
 # Fecha a conexão
 conn.close()
