@@ -6,7 +6,6 @@ cursor = conn.cursor()
 
 querysBD = [
     '''INSERT INTO TBPesos (ValorPes, NomeIndexPes) VALUES (4, 'Objetivo');''',
-    '''INSERT INTO TBPesos (ValorPes, NomeIndexPes) VALUES (5, 'MusculoAlvo');''',
     '''INSERT INTO TBPesos (ValorPes, NomeIndexPes) VALUES (3, 'Genero');''',
     '''INSERT INTO TBPesos (ValorPes, NomeIndexPes) VALUES (1, 'Peso');''',
     '''INSERT INTO TBPesos (ValorPes, NomeIndexPes) VALUES (1, 'Altura');''',

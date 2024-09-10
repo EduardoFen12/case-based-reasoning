@@ -59,7 +59,7 @@ querysCriacaoBD = [
     )''',
     '''CREATE TABLE IF NOT EXISTS TBPesos (
         PkIdPes INTEGER PRIMARY KEY AUTOINCREMENT,
-        ValorPes TEXT NOT NULL,
+        ValorPes integer NOT NULL,
         NomeIndexPes TEXT NOT NULL
     )''',
 ]
