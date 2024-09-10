@@ -91,6 +91,118 @@ querysBD = [
     "INSERT INTO TBTreinos (NomeTre) VALUES ('Treino Inferior Com Foco 1');",
     "INSERT INTO TBTreinos (NomeTre) VALUES ('Treino Inferior Com Foco 2');",
 
+    # Protocolo 1: Associação de exercícios com o "Treino Superior 1"
+    "INSERT INTO TBRelET (FkIdTre, FkIdExe) VALUES ((SELECT PkIdTre FROM TBTreinos WHERE NomeTre = 'Treino Superior 1'), (SELECT PkIdExe FROM TBExercicios WHERE DescricaoExe = 'Supino reto'));",
+    "INSERT INTO TBRelET (FkIdTre, FkIdExe) VALUES ((SELECT PkIdTre FROM TBTreinos WHERE NomeTre = 'Treino Superior 1'), (SELECT PkIdExe FROM TBExercicios WHERE DescricaoExe = 'Supino inclinado'));",
+    "INSERT INTO TBRelET (FkIdTre, FkIdExe) VALUES ((SELECT PkIdTre FROM TBTreinos WHERE NomeTre = 'Treino Superior 1'), (SELECT PkIdExe FROM TBExercicios WHERE DescricaoExe = 'Voador'));",
+    "INSERT INTO TBRelET (FkIdTre, FkIdExe) VALUES ((SELECT PkIdTre FROM TBTreinos WHERE NomeTre = 'Treino Superior 1'), (SELECT PkIdExe FROM TBExercicios WHERE DescricaoExe = 'Voador inverso'));",
+    "INSERT INTO TBRelET (FkIdTre, FkIdExe) VALUES ((SELECT PkIdTre FROM TBTreinos WHERE NomeTre = 'Treino Superior 1'), (SELECT PkIdExe FROM TBExercicios WHERE DescricaoExe = 'Cross over polia alta'));",
+
+    # Protocolo 2: Associação de exercícios com o "Treino Inferior 1"
+    "INSERT INTO TBRelET (FkIdTre, FkIdExe) VALUES ((SELECT PkIdTre FROM TBTreinos WHERE NomeTre = 'Treino Inferior 1'), (SELECT PkIdExe FROM TBExercicios WHERE DescricaoExe = 'Cadeira extensora'));",
+    "INSERT INTO TBRelET (FkIdTre, FkIdExe) VALUES ((SELECT PkIdTre FROM TBTreinos WHERE NomeTre = 'Treino Inferior 1'), (SELECT PkIdExe FROM TBExercicios WHERE DescricaoExe = 'Cadeira flexora'));",
+    "INSERT INTO TBRelET (FkIdTre, FkIdExe) VALUES ((SELECT PkIdTre FROM TBTreinos WHERE NomeTre = 'Treino Inferior 1'), (SELECT PkIdExe FROM TBExercicios WHERE DescricaoExe = 'Mesa flexora'));",
+    "INSERT INTO TBRelET (FkIdTre, FkIdExe) VALUES ((SELECT PkIdTre FROM TBTreinos WHERE NomeTre = 'Treino Inferior 1'), (SELECT PkIdExe FROM TBExercicios WHERE DescricaoExe = 'Agachamento livre'));",
+    "INSERT INTO TBRelET (FkIdTre, FkIdExe) VALUES ((SELECT PkIdTre FROM TBTreinos WHERE NomeTre = 'Treino Inferior 1'), (SELECT PkIdExe FROM TBExercicios WHERE DescricaoExe = 'Stiff'));",
+
+    # Protocolo 3: Associação de exercícios com o "Treino Ambos Superior 1"
+    "INSERT INTO TBRelET (FkIdTre, FkIdExe) VALUES ((SELECT PkIdTre FROM TBTreinos WHERE NomeTre = 'Treino Ambos Superior 1'), (SELECT PkIdExe FROM TBExercicios WHERE DescricaoExe = 'Supino reto'));",
+    "INSERT INTO TBRelET (FkIdTre, FkIdExe) VALUES ((SELECT PkIdTre FROM TBTreinos WHERE NomeTre = 'Treino Ambos Superior 1'), (SELECT PkIdExe FROM TBExercicios WHERE DescricaoExe = 'Supino inclinado'));",
+    "INSERT INTO TBRelET (FkIdTre, FkIdExe) VALUES ((SELECT PkIdTre FROM TBTreinos WHERE NomeTre = 'Treino Ambos Superior 1'), (SELECT PkIdExe FROM TBExercicios WHERE DescricaoExe = 'Voador'));",
+    "INSERT INTO TBRelET (FkIdTre, FkIdExe) VALUES ((SELECT PkIdTre FROM TBTreinos WHERE NomeTre = 'Treino Ambos Superior 1'), (SELECT PkIdExe FROM TBExercicios WHERE DescricaoExe = 'Voador inverso'));",
+    "INSERT INTO TBRelET (FkIdTre, FkIdExe) VALUES ((SELECT PkIdTre FROM TBTreinos WHERE NomeTre = 'Treino Ambos Superior 1'), (SELECT PkIdExe FROM TBExercicios WHERE DescricaoExe = 'Cross over polia alta'));",
+
+    # Protocolo 4: Associação de exercícios com o "Treino Ambos Inferior 1"
+    "INSERT INTO TBRelET (FkIdTre, FkIdExe) VALUES ((SELECT PkIdTre FROM TBTreinos WHERE NomeTre = 'Treino Ambos Inferior 1'), (SELECT PkIdExe FROM TBExercicios WHERE DescricaoExe = 'Cadeira extensora'));",
+    "INSERT INTO TBRelET (FkIdTre, FkIdExe) VALUES ((SELECT PkIdTre FROM TBTreinos WHERE NomeTre = 'Treino Ambos Inferior 1'), (SELECT PkIdExe FROM TBExercicios WHERE DescricaoExe = 'Cadeira flexora'));",
+    "INSERT INTO TBRelET (FkIdTre, FkIdExe) VALUES ((SELECT PkIdTre FROM TBTreinos WHERE NomeTre = 'Treino Ambos Inferior 1'), (SELECT PkIdExe FROM TBExercicios WHERE DescricaoExe = 'Mesa flexora'));",
+    "INSERT INTO TBRelET (FkIdTre, FkIdExe) VALUES ((SELECT PkIdTre FROM TBTreinos WHERE NomeTre = 'Treino Ambos Inferior 1'), (SELECT PkIdExe FROM TBExercicios WHERE DescricaoExe = 'Agachamento livre'));",
+    "INSERT INTO TBRelET (FkIdTre, FkIdExe) VALUES ((SELECT PkIdTre FROM TBTreinos WHERE NomeTre = 'Treino Ambos Inferior 1'), (SELECT PkIdExe FROM TBExercicios WHERE DescricaoExe = 'Stiff'));",
+
+    # Protocolo 5: Associação de exercícios com o "Treino Inferior Com Foco 1"
+    "INSERT INTO TBRelET (FkIdTre, FkIdExe) VALUES ((SELECT PkIdTre FROM TBTreinos WHERE NomeTre = 'Treino Superior 2'), (SELECT PkIdExe FROM TBExercicios WHERE DescricaoExe = 'Agachamento no smith'));",
+    "INSERT INTO TBRelET (FkIdTre, FkIdExe) VALUES ((SELECT PkIdTre FROM TBTreinos WHERE NomeTre = 'Treino Superior 2'), (SELECT PkIdExe FROM TBExercicios WHERE DescricaoExe = 'Elevação de quadril'));",
+    "INSERT INTO TBRelET (FkIdTre, FkIdExe) VALUES ((SELECT PkIdTre FROM TBTreinos WHERE NomeTre = 'Treino Superior 2'), (SELECT PkIdExe FROM TBExercicios WHERE DescricaoExe = 'Agachamento livre'));",
+    "INSERT INTO TBRelET (FkIdTre, FkIdExe) VALUES ((SELECT PkIdTre FROM TBTreinos WHERE NomeTre = 'Treino Superior 2'), (SELECT PkIdExe FROM TBExercicios WHERE DescricaoExe = 'Stiff'));",
+    "INSERT INTO TBRelET (FkIdTre, FkIdExe) VALUES ((SELECT PkIdTre FROM TBTreinos WHERE NomeTre = 'Treino Superior 2'), (SELECT PkIdExe FROM TBExercicios WHERE DescricaoExe = 'Mesa flexora'));",
+
+    # Protocolo 6: Associação de exercícios com o "Treino Inferior Com Foco 2"
+    "INSERT INTO TBRelET (FkIdTre, FkIdExe) VALUES ((SELECT PkIdTre FROM TBTreinos WHERE NomeTre = 'Treino Inferior 2'), (SELECT PkIdExe FROM TBExercicios WHERE DescricaoExe = 'Agachamento no smith'));",
+    "INSERT INTO TBRelET (FkIdTre, FkIdExe) VALUES ((SELECT PkIdTre FROM TBTreinos WHERE NomeTre = 'Treino Inferior 2'), (SELECT PkIdExe FROM TBExercicios WHERE DescricaoExe = 'Elevação de quadril'));",
+    "INSERT INTO TBRelET (FkIdTre, FkIdExe) VALUES ((SELECT PkIdTre FROM TBTreinos WHERE NomeTre = 'Treino Inferior 2'), (SELECT PkIdExe FROM TBExercicios WHERE DescricaoExe = 'Agachamento livre'));",
+    "INSERT INTO TBRelET (FkIdTre, FkIdExe) VALUES ((SELECT PkIdTre FROM TBTreinos WHERE NomeTre = 'Treino Inferior 2'), (SELECT PkIdExe FROM TBExercicios WHERE DescricaoExe = 'Stiff'));",
+    "INSERT INTO TBRelET (FkIdTre, FkIdExe) VALUES ((SELECT PkIdTre FROM TBTreinos WHERE NomeTre = 'Treino Inferior 2'), (SELECT PkIdExe FROM TBExercicios WHERE DescricaoExe = 'Mesa flexora'));",
+
+    # Protocolo 7: Associação de exercícios com o "Treino Superior Com Foco 1"
+    "INSERT INTO TBRelET (FkIdTre, FkIdExe) VALUES ((SELECT PkIdTre FROM TBTreinos WHERE NomeTre = 'Treino Ambos Superior 2'), (SELECT PkIdExe FROM TBExercicios WHERE DescricaoExe = 'Supino reto'));",
+    "INSERT INTO TBRelET (FkIdTre, FkIdExe) VALUES ((SELECT PkIdTre FROM TBTreinos WHERE NomeTre = 'Treino Ambos Superior 2'), (SELECT PkIdExe FROM TBExercicios WHERE DescricaoExe = 'Supino inclinado'));",
+    "INSERT INTO TBRelET (FkIdTre, FkIdExe) VALUES ((SELECT PkIdTre FROM TBTreinos WHERE NomeTre = 'Treino Ambos Superior 2'), (SELECT PkIdExe FROM TBExercicios WHERE DescricaoExe = 'Voador'));",
+    "INSERT INTO TBRelET (FkIdTre, FkIdExe) VALUES ((SELECT PkIdTre FROM TBTreinos WHERE NomeTre = 'Treino Ambos Superior 2'), (SELECT PkIdExe FROM TBExercicios WHERE DescricaoExe = 'Voador inverso'));",
+    "INSERT INTO TBRelET (FkIdTre, FkIdExe) VALUES ((SELECT PkIdTre FROM TBTreinos WHERE NomeTre = 'Treino Ambos Superior 2'), (SELECT PkIdExe FROM TBExercicios WHERE DescricaoExe = 'Cross over polia alta'));",
+
+    # Protocolo 8: Associação de exercícios com o "Treino Superior Com Foco 2"
+    "INSERT INTO TBRelET (FkIdTre, FkIdExe) VALUES ((SELECT PkIdTre FROM TBTreinos WHERE NomeTre = 'Treino Ambos Inferior 2'), (SELECT PkIdExe FROM TBExercicios WHERE DescricaoExe = 'Supino reto'));",
+    "INSERT INTO TBRelET (FkIdTre, FkIdExe) VALUES ((SELECT PkIdTre FROM TBTreinos WHERE NomeTre = 'Treino Ambos Inferior 2'), (SELECT PkIdExe FROM TBExercicios WHERE DescricaoExe = 'Supino inclinado'));",
+    "INSERT INTO TBRelET (FkIdTre, FkIdExe) VALUES ((SELECT PkIdTre FROM TBTreinos WHERE NomeTre = 'Treino Ambos Inferior 2'), (SELECT PkIdExe FROM TBExercicios WHERE DescricaoExe = 'Voador'));",
+    "INSERT INTO TBRelET (FkIdTre, FkIdExe) VALUES ((SELECT PkIdTre FROM TBTreinos WHERE NomeTre = 'Treino Ambos Inferior 2'), (SELECT PkIdExe FROM TBExercicios WHERE DescricaoExe = 'Voador inverso'));",
+    "INSERT INTO TBRelET (FkIdTre, FkIdExe) VALUES ((SELECT PkIdTre FROM TBTreinos WHERE NomeTre = 'Treino Ambos Inferior 2'), (SELECT PkIdExe FROM TBExercicios WHERE DescricaoExe = 'Cross over polia alta'));",
+
+    # Protocolo 9: Associação de exercícios com o "Treino Inferior Com Foco 3"
+    "INSERT INTO TBRelET (FkIdTre, FkIdExe) VALUES ((SELECT PkIdTre FROM TBTreinos WHERE NomeTre = 'Treino Superior 3'), (SELECT PkIdExe FROM TBExercicios WHERE DescricaoExe = 'Agachamento no smith'));",
+    "INSERT INTO TBRelET (FkIdTre, FkIdExe) VALUES ((SELECT PkIdTre FROM TBTreinos WHERE NomeTre = 'Treino Superior 3'), (SELECT PkIdExe FROM TBExercicios WHERE DescricaoExe = 'Elevação de quadril'));",
+    "INSERT INTO TBRelET (FkIdTre, FkIdExe) VALUES ((SELECT PkIdTre FROM TBTreinos WHERE NomeTre = 'Treino Superior 3'), (SELECT PkIdExe FROM TBExercicios WHERE DescricaoExe = 'Agachamento livre'));",
+    "INSERT INTO TBRelET (FkIdTre, FkIdExe) VALUES ((SELECT PkIdTre FROM TBTreinos WHERE NomeTre = 'Treino Superior 3'), (SELECT PkIdExe FROM TBExercicios WHERE DescricaoExe = 'Stiff'));",
+    "INSERT INTO TBRelET (FkIdTre, FkIdExe) VALUES ((SELECT PkIdTre FROM TBTreinos WHERE NomeTre = 'Treino Superior 3'), (SELECT PkIdExe FROM TBExercicios WHERE DescricaoExe = 'Mesa flexora'));",
+
+    # Protocolo 10: Associação de exercícios com o "Treino Superior Com Foco 3"
+    "INSERT INTO TBRelET (FkIdTre, FkIdExe) VALUES ((SELECT PkIdTre FROM TBTreinos WHERE NomeTre = 'Treino Inferior 3'), (SELECT PkIdExe FROM TBExercicios WHERE DescricaoExe = 'Supino reto'));",
+    "INSERT INTO TBRelET (FkIdTre, FkIdExe) VALUES ((SELECT PkIdTre FROM TBTreinos WHERE NomeTre = 'Treino Inferior 3'), (SELECT PkIdExe FROM TBExercicios WHERE DescricaoExe = 'Supino inclinado'));",
+    "INSERT INTO TBRelET (FkIdTre, FkIdExe) VALUES ((SELECT PkIdTre FROM TBTreinos WHERE NomeTre = 'Treino Inferior 3'), (SELECT PkIdExe FROM TBExercicios WHERE DescricaoExe = 'Voador'));",
+    "INSERT INTO TBRelET (FkIdTre, FkIdExe) VALUES ((SELECT PkIdTre FROM TBTreinos WHERE NomeTre = 'Treino Inferior 3'), (SELECT PkIdExe FROM TBExercicios WHERE DescricaoExe = 'Voador inverso'));",
+    "INSERT INTO TBRelET (FkIdTre, FkIdExe) VALUES ((SELECT PkIdTre FROM TBTreinos WHERE NomeTre = 'Treino Inferior 3'), (SELECT PkIdExe FROM TBExercicios WHERE DescricaoExe = 'Cross over polia alta'));",
+
+    # Protocolo 11: Associação de exercícios com o "Treino Inferior Com Foco 4"
+    "INSERT INTO TBRelET (FkIdTre, FkIdExe) VALUES ((SELECT PkIdTre FROM TBTreinos WHERE NomeTre = 'Treino Ambos Superior 3'), (SELECT PkIdExe FROM TBExercicios WHERE DescricaoExe = 'Agachamento no smith'));",
+    "INSERT INTO TBRelET (FkIdTre, FkIdExe) VALUES ((SELECT PkIdTre FROM TBTreinos WHERE NomeTre = 'Treino Ambos Superior 3'), (SELECT PkIdExe FROM TBExercicios WHERE DescricaoExe = 'Elevação de quadril'));",
+    "INSERT INTO TBRelET (FkIdTre, FkIdExe) VALUES ((SELECT PkIdTre FROM TBTreinos WHERE NomeTre = 'Treino Ambos Superior 3'), (SELECT PkIdExe FROM TBExercicios WHERE DescricaoExe = 'Agachamento livre'));",
+    "INSERT INTO TBRelET (FkIdTre, FkIdExe) VALUES ((SELECT PkIdTre FROM TBTreinos WHERE NomeTre = 'Treino Ambos Superior 3'), (SELECT PkIdExe FROM TBExercicios WHERE DescricaoExe = 'Stiff'));",
+    "INSERT INTO TBRelET (FkIdTre, FkIdExe) VALUES ((SELECT PkIdTre FROM TBTreinos WHERE NomeTre = 'Treino Ambos Superior 3'), (SELECT PkIdExe FROM TBExercicios WHERE DescricaoExe = 'Mesa flexora'));",
+
+    # Protocolo 12: Associação de exercícios com o "Treino Superior Com Foco 4"
+    "INSERT INTO TBRelET (FkIdTre, FkIdExe) VALUES ((SELECT PkIdTre FROM TBTreinos WHERE NomeTre = 'Treino Ambos Inferior 3'), (SELECT PkIdExe FROM TBExercicios WHERE DescricaoExe = 'Supino reto'));",
+    "INSERT INTO TBRelET (FkIdTre, FkIdExe) VALUES ((SELECT PkIdTre FROM TBTreinos WHERE NomeTre = 'Treino Ambos Inferior 3'), (SELECT PkIdExe FROM TBExercicios WHERE DescricaoExe = 'Supino inclinado'));",
+    "INSERT INTO TBRelET (FkIdTre, FkIdExe) VALUES ((SELECT PkIdTre FROM TBTreinos WHERE NomeTre = 'Treino Ambos Inferior 3'), (SELECT PkIdExe FROM TBExercicios WHERE DescricaoExe = 'Voador'));",
+    "INSERT INTO TBRelET (FkIdTre, FkIdExe) VALUES ((SELECT PkIdTre FROM TBTreinos WHERE NomeTre = 'Treino Ambos Inferior 3'), (SELECT PkIdExe FROM TBExercicios WHERE DescricaoExe = 'Voador inverso'));",
+    "INSERT INTO TBRelET (FkIdTre, FkIdExe) VALUES ((SELECT PkIdTre FROM TBTreinos WHERE NomeTre = 'Treino Ambos Inferior 3'), (SELECT PkIdExe FROM TBExercicios WHERE DescricaoExe = 'Cross over polia alta'));",
+
+    # Protocolo 13: Associação de exercícios com o "Treino Inferior Com Foco 5"
+    "INSERT INTO TBRelET (FkIdTre, FkIdExe) VALUES ((SELECT PkIdTre FROM TBTreinos WHERE NomeTre = 'Treino Superior 5'), (SELECT PkIdExe FROM TBExercicios WHERE DescricaoExe = 'Agachamento no smith'));",
+    "INSERT INTO TBRelET (FkIdTre, FkIdExe) VALUES ((SELECT PkIdTre FROM TBTreinos WHERE NomeTre = 'Treino Superior 5'), (SELECT PkIdExe FROM TBExercicios WHERE DescricaoExe = 'Elevação de quadril'));",
+    "INSERT INTO TBRelET (FkIdTre, FkIdExe) VALUES ((SELECT PkIdTre FROM TBTreinos WHERE NomeTre = 'Treino Superior 5'), (SELECT PkIdExe FROM TBExercicios WHERE DescricaoExe = 'Agachamento livre'));",
+    "INSERT INTO TBRelET (FkIdTre, FkIdExe) VALUES ((SELECT PkIdTre FROM TBTreinos WHERE NomeTre = 'Treino Superior 5'), (SELECT PkIdExe FROM TBExercicios WHERE DescricaoExe = 'Stiff'));",
+    "INSERT INTO TBRelET (FkIdTre, FkIdExe) VALUES ((SELECT PkIdTre FROM TBTreinos WHERE NomeTre = 'Treino Superior 5'), (SELECT PkIdExe FROM TBExercicios WHERE DescricaoExe = 'Mesa flexora'));",
+
+    # Protocolo 14: Associação de exercícios com o "Treino Superior Com Foco 5"
+    "INSERT INTO TBRelET (FkIdTre, FkIdExe) VALUES ((SELECT PkIdTre FROM TBTreinos WHERE NomeTre = 'Treino Inferior 5'), (SELECT PkIdExe FROM TBExercicios WHERE DescricaoExe = 'Supino reto'));",
+    "INSERT INTO TBRelET (FkIdTre, FkIdExe) VALUES ((SELECT PkIdTre FROM TBTreinos WHERE NomeTre = 'Treino Inferior 5'), (SELECT PkIdExe FROM TBExercicios WHERE DescricaoExe = 'Supino inclinado'));",
+    "INSERT INTO TBRelET (FkIdTre, FkIdExe) VALUES ((SELECT PkIdTre FROM TBTreinos WHERE NomeTre = 'Treino Inferior 5'), (SELECT PkIdExe FROM TBExercicios WHERE DescricaoExe = 'Voador'));",
+    "INSERT INTO TBRelET (FkIdTre, FkIdExe) VALUES ((SELECT PkIdTre FROM TBTreinos WHERE NomeTre = 'Treino Inferior 5'), (SELECT PkIdExe FROM TBExercicios WHERE DescricaoExe = 'Voador inverso'));",
+    "INSERT INTO TBRelET (FkIdTre, FkIdExe) VALUES ((SELECT PkIdTre FROM TBTreinos WHERE NomeTre = 'Treino Inferior 5'), (SELECT PkIdExe FROM TBExercicios WHERE DescricaoExe = 'Cross over polia alta'));",
+
+    # Protocolo 15: Associação de exercícios com o "Treino Inferior Com Foco 6"
+    "INSERT INTO TBRelET (FkIdTre, FkIdExe) VALUES ((SELECT PkIdTre FROM TBTreinos WHERE NomeTre = 'Treino Superior Com Foco 1'), (SELECT PkIdExe FROM TBExercicios WHERE DescricaoExe = 'Agachamento no smith'));",
+    "INSERT INTO TBRelET (FkIdTre, FkIdExe) VALUES ((SELECT PkIdTre FROM TBTreinos WHERE NomeTre = 'Treino Superior Com Foco 1'), (SELECT PkIdExe FROM TBExercicios WHERE DescricaoExe = 'Elevação de quadril'));",
+    "INSERT INTO TBRelET (FkIdTre, FkIdExe) VALUES ((SELECT PkIdTre FROM TBTreinos WHERE NomeTre = 'Treino Superior Com Foco 1'), (SELECT PkIdExe FROM TBExercicios WHERE DescricaoExe = 'Agachamento livre'));",
+    "INSERT INTO TBRelET (FkIdTre, FkIdExe) VALUES ((SELECT PkIdTre FROM TBTreinos WHERE NomeTre = 'Treino Superior Com Foco 1'), (SELECT PkIdExe FROM TBExercicios WHERE DescricaoExe = 'Stiff'));",
+    "INSERT INTO TBRelET (FkIdTre, FkIdExe) VALUES ((SELECT PkIdTre FROM TBTreinos WHERE NomeTre = 'Treino Superior Com Foco 1'), (SELECT PkIdExe FROM TBExercicios WHERE DescricaoExe = 'Mesa flexora'));",
+
+    # Protocolo 16: Associação de exercícios com o "Treino Superior Com Foco 6"
+    "INSERT INTO TBRelET (FkIdTre, FkIdExe) VALUES ((SELECT PkIdTre FROM TBTreinos WHERE NomeTre = 'Treino Inferior Com Foco 1'), (SELECT PkIdExe FROM TBExercicios WHERE DescricaoExe = 'Supino reto'));",
+    "INSERT INTO TBRelET (FkIdTre, FkIdExe) VALUES ((SELECT PkIdTre FROM TBTreinos WHERE NomeTre = 'Treino Inferior Com Foco 1'), (SELECT PkIdExe FROM TBExercicios WHERE DescricaoExe = 'Supino inclinado'));",
+    "INSERT INTO TBRelET (FkIdTre, FkIdExe) VALUES ((SELECT PkIdTre FROM TBTreinos WHERE NomeTre = 'Treino Inferior Com Foco 1'), (SELECT PkIdExe FROM TBExercicios WHERE DescricaoExe = 'Voador'));",
+    "INSERT INTO TBRelET (FkIdTre, FkIdExe) VALUES ((SELECT PkIdTre FROM TBTreinos WHERE NomeTre = 'Treino Inferior Com Foco 1'), (SELECT PkIdExe FROM TBExercicios WHERE DescricaoExe = 'Voador inverso'));",
+    "INSERT INTO TBRelET (FkIdTre, FkIdExe) VALUES ((SELECT PkIdTre FROM TBTreinos WHERE NomeTre = 'Treino Inferior Com Foco 1'), (SELECT PkIdExe FROM TBExercicios WHERE DescricaoExe = 'Cross over polia alta'));",
+
     # Protocolo 1
     '''INSERT INTO TBRelTP (FkIdPro, FkIdTre) VALUES (1, (SELECT PkIdTre FROM TBTreinos WHERE NomeTre = 'Treino Superior 1'));''',
     '''INSERT INTO TBRelTP (FkIdPro, FkIdTre) VALUES (1, (SELECT PkIdTre FROM TBTreinos WHERE NomeTre = 'Treino Superior 2'));''',
